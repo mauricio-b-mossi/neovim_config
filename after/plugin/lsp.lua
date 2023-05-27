@@ -15,11 +15,12 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 	["<C-y>"] = cmp.mapping.confirm({ select = true }),
-	["<C-Space"] = cmp.mapping.complete(),
+	-- Ctrl+Space to trigger completion menu
+    ['<C-Space>'] = cmp.mapping.complete(),
 })
 
 lsp.set_preferences({
-	sign_icons = {},
+	sign_icons = {}
 })
 
 lsp.setup_nvim_cmp({
@@ -66,9 +67,9 @@ lsp.setup()
 
 vim.diagnostic.config({
 	virtual_text = true,
-	signs = true,
-	update_in_insert = false,
+	signs = false,
+	update_in_insert = true,
 	underline = true,
-	severity_sort = false,
+	severity_sort = true,
 	float = true,
 })
