@@ -15,8 +15,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 	["<C-y>"] = cmp.mapping.confirm({ select = true }),
-	-- Ctrl+Space to trigger completion menu
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ["<C-Space>"] = cmp.mapping.complete(),
 })
 
 lsp.set_preferences({
