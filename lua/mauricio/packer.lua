@@ -12,14 +12,6 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    --use({
-        --'rose-pine/neovim',
-        --as = 'rose-pine',
-        --config = function()
-            --require("rose-pine").setup()
-            --vim.cmd('colorscheme rose-pine')
-        --end
-    --})
     use('theprimeagen/harpoon')
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -67,22 +59,18 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-autopairs'
 
-    use('jose-elias-alvarez/null-ls.nvim')
-
     use('neovim/nvim-lspconfig')
 
-    use('MunifTanjim/prettier.nvim')
-
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-      require("toggleterm").setup()
-    end}
-
-   -- install without yarn or npm
+    -- install without yarn or npm
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-    end)
-
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
+end)
