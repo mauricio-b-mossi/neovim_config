@@ -19,10 +19,16 @@ vim.keymap.set("n", "<leader>o", "za", {noremap = true})
 
 -- Do not yank with x
 vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set("n", "p", 'p', {noremap = true})
+vim.keymap.set('v', 'y', 'y', {noremap = true})
 
+-- Copy and paste to the keyboard with <C-y> and <C-p>.
+vim.keymap.set("n", "<C-p>", '"+p', {noremap = true})
+vim.keymap.set('v', '<C-y>', '"+y', {noremap = true})
 
 vim.keymap.set("v", "K", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "L", ":m '<-2<CR>gv=gv")
+
 
 -- Deleting inside html tag.
 vim.keymap.set("n", "di>", "f<dT>")
