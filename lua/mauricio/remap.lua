@@ -22,13 +22,16 @@ vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set("n", "p", 'p', {noremap = true})
 vim.keymap.set('v', 'y', 'y', {noremap = true})
 
--- Copy and paste to the keyboard with <C-y> and <C-p>.
-vim.keymap.set("n", "<C-p>", '"+p', {noremap = true})
+-- Copy and paste to the keyboard with <C-y> and <C-p>. Remember, must be in visual mode.
+vim.keymap.set("v", "<C-p>", '"+p', {noremap = true})
 vim.keymap.set('v', '<C-y>', '"+y', {noremap = true})
 
 vim.keymap.set("v", "K", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "L", ":m '<-2<CR>gv=gv")
 
+-- Cycling Buffers
+vim.keymap.set("n", "<C-p>", ":bprev<CR>", {noremap=true})
+vim.keymap.set("n", "<C-n>", ":bnext<CR>", {noremap=true})
 
 -- Deleting inside html tag.
 vim.keymap.set("n", "di>", "f<dT>")
@@ -42,6 +45,7 @@ vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true })
 vim.keymap.set('i', '"', '""<Esc>ha', { noremap = true })
 vim.keymap.set("i", "`", "``<Esc>ha", { noremap = true })
 
+-- Rarely use these.
 vim.keymap.set("n", "<C-w>j", "<C-w>h", { noremap = true })
 vim.keymap.set("n", "<C-w>k", "<C-w>j", { noremap = true })
 vim.keymap.set("n", "<C-w>l", "<C-w>k", { noremap = true })
