@@ -105,7 +105,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["emmet-vim"] = {
-    config = { "\27LJ\2\n8\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\5\26user_emmet_leader_key\6g\bvim\0" },
+    config = { "\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\n<C-e>\26user_emmet_leader_key\6g\bvim\0" },
     loaded = true,
     path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
@@ -196,7 +196,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: emmet-vim
 time([[Config for emmet-vim]], true)
-try_loadstring("\27LJ\2\n8\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\5\26user_emmet_leader_key\6g\bvim\0", "config", "emmet-vim")
+try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\n<C-e>\26user_emmet_leader_key\6g\bvim\0", "config", "emmet-vim")
 time([[Config for emmet-vim]], false)
 
 _G._packer.inside_compile = false

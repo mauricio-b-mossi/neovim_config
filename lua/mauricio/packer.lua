@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
         'mattn/emmet-vim',
         config = function()
             -- Example configuration
-            vim.g.user_emmet_leader_key = ''
+            vim.g.user_emmet_leader_key = '<C-e>'
         end
     }
     use('theprimeagen/harpoon')
