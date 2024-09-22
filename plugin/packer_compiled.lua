@@ -104,6 +104,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["emmet-vim"] = {
+    config = { "\27LJ\2\n8\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\5\26user_emmet_leader_key\6g\bvim\0" },
+    loaded = true,
+    path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
@@ -154,16 +160,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter-context",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
-  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "C:\\Users\\mauri\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-autotag",
@@ -198,6 +194,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: emmet-vim
+time([[Config for emmet-vim]], true)
+try_loadstring("\27LJ\2\n8\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\5\26user_emmet_leader_key\6g\bvim\0", "config", "emmet-vim")
+time([[Config for emmet-vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
