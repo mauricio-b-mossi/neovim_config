@@ -45,6 +45,10 @@ vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true })
 vim.keymap.set('i', '"', '""<Esc>ha', { noremap = true })
 vim.keymap.set("i", "`", "``<Esc>ha", { noremap = true })
 
+--Terminal mode exit, note this might fail if powershell is not available.
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-`>', ':terminal pwsh<CR>', { noremap = true, silent = true })
+
 -- Rarely use these.
 vim.keymap.set("n", "<C-w>j", "<C-w>h", { noremap = true })
 vim.keymap.set("n", "<C-w>k", "<C-w>j", { noremap = true })
